@@ -102,7 +102,7 @@ const fragmentSpec = graphql`
 const Feed = (props) => {
     const { data: user, isLoadingNext, hasNext, loadNext } = usePagination(fragmentSpec, props.user);
     const _loadMore = () => {
-      if (!hasMore || isLoading) {
+      if (!hasNext || isLoading) {
         return;
       }
 
